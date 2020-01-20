@@ -5,10 +5,10 @@ package com.sunqc.shuati.utils;
  *
  * @author SQC
  */
-public class Swap<T> {
-    public void swap(T v1, T v2) {
-        T temp = v1;
-        v1 = v2;
-        v2 = temp;
+public class Swap {
+    public static void swap(int[] arr,int  v1, int v2) {
+        int temp =arr[v1];
+        arr[v1] = arr[v2];
+        arr[v2] = temp;
     }
 }
