@@ -8,24 +8,30 @@ public class MergerSort {
         if (arr == null || arr.length < 2) {
             return;
         }
+        mergerSort(arr,L,R);
+    }
+    public static void mergerSort(int[] arr,int L,int R){
         if (L == R){
             return;
         }
-        int mid = (L+R)/2;
-        sort(arr,0,mid);
-        sort(arr,mid+1,R);
-        merger(arr,L,R);
+        int mid = L+(R-L)>>1;
+        mergerSort(arr,L,mid);
+        mergerSort(arr, mid+1, R);
+        merge(arr, L, R,mid);
+
     }
-    public static void merger(int[] arr, int L, int R){
+    public static void merge(int[] arr, int L, int R,int M){
+        if (L == R){
+            return;
+        }
         int[] help  = new int[R - L + 1];
-        int mid = (L + R) / 2;
         int p1 = L;
-        int p2 = mid + 1;
+        int p2 = M + 1;
         int i = 0;
-        while(p1 <= mid && p2 <= R ){
+        while(p1 <= M && p2 <= R ){
             help[i++] = arr[p1] < arr[p2]? arr[p1++] : arr[p2++];
         }
-        while(p1 <= mid){
+        while(p1 <= M){
             help[i++] = arr[p1++];
         }
         while(p2 <= R){
