@@ -115,8 +115,6 @@ public class XiaoHeProblem {
     }
 
     public static void main(String[] args) {
-//        int[] arr = generateRandomArray(8, 7);
-//        System.out.println(solve(arr, 0, arr.length - 1));
         int testTime = 50;
         int maxSize = 5;
         int maxValue = 8;
