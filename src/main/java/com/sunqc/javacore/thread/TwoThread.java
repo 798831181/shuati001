@@ -1,4 +1,4 @@
-package com.sunqc.thread;
+package com.sunqc.javacore.thread;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
