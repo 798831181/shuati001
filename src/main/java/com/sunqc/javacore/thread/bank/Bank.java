@@ -64,13 +64,9 @@ public class Bank {
      * @param to
      * @param amount
      */
-    public synchronized void transfer2(int from, int to, double amount){
+    public synchronized void transfer2(int from, int to, double amount) throws InterruptedException {
         while(accounts[from] < amount){
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            wait();
         }
         System.out.println(Thread.currentThread());
         accounts[from] -= amount;

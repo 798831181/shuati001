@@ -17,7 +17,11 @@ public class UnSynchBankTest {
                 while (true) {
                     int toAccount = (int) (Math.random() * bank.size());
                     double amount = MAX_ACCOUNT * Math.random();
-                    bank.transfer2(fromAccount, toAccount, amount);
+                    try {
+                        bank.transfer2(fromAccount, toAccount, amount);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     try {
                         Thread.sleep((int) (DELAY * Math.random()));
                     } catch (InterruptedException e) {
