@@ -2,7 +2,7 @@ package com.sunqc.javacore.thread.bank;
 
 import org.junit.Test;
 
-public class UnSynchBankTest {
+public class UnSyncBankTest {
     private static final int NACCOUNTS = 100;
     private static final double INITIAL_BALANCE = 1000;
     private static final double MAX_ACCOUNT = 1000;

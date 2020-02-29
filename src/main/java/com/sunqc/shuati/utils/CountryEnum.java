@@ -1,5 +1,7 @@
 package com.sunqc.shuati.utils;
 
+import java.util.Arrays;
+
 /**
  * 国家枚举
  *
@@ -26,8 +28,7 @@ public enum CountryEnum {
     /**
      * 吴
      */
-    FIVE(5, "吴"),
-    ;
+    FIVE(5, "吴");
 
 
     private int number;
@@ -50,10 +51,14 @@ public enum CountryEnum {
         this.value = value;
     }
 
-    CountryEnum(int number, String value) {
+     CountryEnum(int number, String value) {
         this.number = number;
         this.value = value;
     }
+
+    CountryEnum() {
+    }
+
     public static CountryEnum foreach_CountryEnum(int index){
         CountryEnum[] values = CountryEnum.values();
         for (CountryEnum value : values) {
@@ -62,6 +67,11 @@ public enum CountryEnum {
             }
         }
         return null;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(CountryEnum.values()));
+        System.out.println(CountryEnum.ONE.getValue());
     }
 
 

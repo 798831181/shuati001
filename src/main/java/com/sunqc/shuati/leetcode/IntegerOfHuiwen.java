@@ -20,7 +20,10 @@ public class IntegerOfHuiwen {
     	return true;
     }
 
-    public static void main(String[] args) {
+	public IntegerOfHuiwen() {
+	}
+
+	public static void main(String[] args) {
 		IntegerOfHuiwen integerOfHuiwen = new IntegerOfHuiwen();
 		System.out.println(integerOfHuiwen.isPalindrome(101));
 	}

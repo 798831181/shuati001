@@ -9,8 +9,7 @@ public enum Constant {
     // 点
     DOT("."),
     // 斜线
-    SLASH("/"),
-    ;
+    SLASH("/");
 
     private String msg;
     Constant(String msg) {
