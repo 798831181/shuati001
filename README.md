@@ -1,4 +1,36 @@
 # shuati001
+# 基础
+
+# 二分查找
+
+```java
+int mid = left + (right - left) / 2;
+```
+## 锁
+
+### java中的锁有哪些？
+
+Lock接口
+
+相比synchronized优点：
+
+拥有了锁获取与释放的可操作性、可中断的获取锁以及超时获取锁等多种synchronized关键字所不具备的同步特性。
+lock的api
+
+lock()获取锁
+
+lockInterrupttibly()可中断的获取锁
+
+tryLock() 尝试非阻塞的获取锁
+
+unLock()释放锁
+
+newCondition()
+
+队列同步器
+
+
+
 leetcode excrcise
 ## 排序算法
 一共有几种排序算法呢？
